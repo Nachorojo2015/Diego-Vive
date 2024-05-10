@@ -6,7 +6,9 @@ import LogoDiego from "./LogoDiego.astro";
   class="bg-black bg-opacity-30 p-5 z-[200] w-full transition-all duration-300 text-white fixed"
   id="menu"
 >
-  <nav class="flex md:justify-center items-center md:gap-[150px] justify-between">
+  <nav
+    class="flex md:justify-center items-center md:gap-[150px] justify-between"
+  >
     <div>
       <LogoDiego />
     </div>
@@ -26,7 +28,7 @@ import LogoDiego from "./LogoDiego.astro";
         ACERCA DE
       </a>
       <a
-      href="#horarios"
+        href="#horarios"
         class="transition-all duration-200 hover:text-orange-300 hvr-underline-from-center"
         id="item-menu-3"
       >
@@ -223,11 +225,13 @@ import LogoDiego from "./LogoDiego.astro";
     document
       .getElementById("menu-mobile")
       .classList.remove("translate-x-[250px]");
+    document.body.classList.add("overflow-hidden");
   });
   // Menu mobile. Cerrar
   const buttonMenuClose = document.getElementById("button-close");
   buttonMenuClose.addEventListener("click", () => {
     document.getElementById("menu-mobile").classList.add("translate-x-[250px]");
+    document.body.classList.remove("overflow-hidden");
   });
 
   // --------------------
@@ -253,7 +257,7 @@ import LogoDiego from "./LogoDiego.astro";
   const itemMenu5 = document.getElementById("item-menu-5");
   const itemMenu6 = document.getElementById("item-menu-6");
   const itemMenu7 = document.getElementById("item-menu-7");
-  const buttonComprar = document.getElementById("item-comprar")
+  const buttonComprar = document.getElementById("item-comprar");
 
   // Links del Menu mobile
   const itemMenuMobile1 = document.getElementById("item-menu-mobile-1");
@@ -263,7 +267,7 @@ import LogoDiego from "./LogoDiego.astro";
   const itemMenuMobile5 = document.getElementById("item-menu-mobile-5");
   const itemMenuMobile6 = document.getElementById("item-menu-mobile-6");
   const itemMenuMobile7 = document.getElementById("item-menu-mobile-7");
-  const buttonComprarMobile = document.getElementById("item-comprar-mobile")
+  const buttonComprarMobile = document.getElementById("item-comprar-mobile");
 
   const select = document.getElementById("paises") as HTMLSelectElement;
   select.addEventListener("change", () => {
@@ -276,7 +280,7 @@ import LogoDiego from "./LogoDiego.astro";
       itemMenu5.textContent = "PROMOZIONI";
       itemMenu6.textContent = "VIDEO";
       itemMenu7.textContent = "CONTATTI";
-      buttonComprar.textContent = "Acquistare biglietti"
+      buttonComprar.textContent = "Acquistare biglietti";
       // Mobile
       itemMenuMobile1.textContent = "HOME";
       itemMenuMobile2.textContent = "SU DI NOI";
@@ -285,7 +289,7 @@ import LogoDiego from "./LogoDiego.astro";
       itemMenuMobile5.textContent = "PROMOZIONI";
       itemMenuMobile6.textContent = "VIDEO";
       itemMenuMobile7.textContent = "CONTATTI";
-      buttonComprarMobile.textContent = "Acquistare"
+      buttonComprarMobile.textContent = "Acquistare";
     } else {
       // Pc
       itemMenu1.textContent = "HOME";
@@ -295,7 +299,7 @@ import LogoDiego from "./LogoDiego.astro";
       itemMenu5.textContent = "PROMOCIONES";
       itemMenu6.textContent = "VIDEOS";
       itemMenu7.textContent = "CONTACTO";
-      buttonComprar.textContent = "Comprar entradas"
+      buttonComprar.textContent = "Comprar entradas";
       // Mobile
       itemMenuMobile1.textContent = "HOME";
       itemMenuMobile2.textContent = "ACERCA DE";
@@ -304,8 +308,38 @@ import LogoDiego from "./LogoDiego.astro";
       itemMenuMobile5.textContent = "PROMOCIONES";
       itemMenuMobile6.textContent = "VIDEOS";
       itemMenuMobile7.textContent = "CONTACTO";
-      buttonComprarMobile.textContent = "Comprar"
+      buttonComprarMobile.textContent = "Comprar";
     }
     console.log(select.value);
+  });
+
+  // Efecto cerrar menu mobile cuando se presiona un link
+  itemMenuMobile1.addEventListener("click", () => {
+    document.getElementById("menu-mobile").classList.add("translate-x-[250px]");
+    document.body.classList.remove("overflow-hidden");
+  });
+  itemMenuMobile2.addEventListener("click", () => {
+    document.getElementById("menu-mobile").classList.add("translate-x-[250px]");
+    document.body.classList.remove("overflow-hidden");
+  });
+  itemMenuMobile3.addEventListener("click", () => {
+    document.getElementById("menu-mobile").classList.add("translate-x-[250px]");
+    document.body.classList.remove("overflow-hidden");
+  });
+  itemMenuMobile4.addEventListener("click", () => {
+    document.getElementById("menu-mobile").classList.add("translate-x-[250px]");
+    document.body.classList.remove("overflow-hidden");
+  });
+  itemMenuMobile5.addEventListener("click", () => {
+    document.getElementById("menu-mobile").classList.add("translate-x-[250px]");
+    document.body.classList.remove("overflow-hidden");
+  });
+  itemMenuMobile6.addEventListener("click", () => {
+    document.getElementById("menu-mobile").classList.add("translate-x-[250px]");
+    document.body.classList.remove("overflow-hidden");
+  });
+  itemMenuMobile7.addEventListener("click", () => {
+    document.getElementById("menu-mobile").classList.add("translate-x-[250px]");
+    document.body.classList.remove("overflow-hidden");
   });
 </script>
