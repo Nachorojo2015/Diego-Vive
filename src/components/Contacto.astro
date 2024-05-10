@@ -1,0 +1,65 @@
+<section
+  class="md:p-20 p-5 md:pt-[200px] bg-black opacity-95 bg-cover bg-no-repeat flex md:flex-row flex-col justify-center gap-20"
+  style={{ backgroundImage: "url(/fondo-3.png)" }}
+  id="contacto"
+>
+  <div>
+    <h5
+      class="md:text-[45px] text-2xl text-white font-[500] uppercase md:text-left text-center"
+    >
+      Comuníquese con nosotros
+    </h5>
+    <p class="text-white font-[600] mt-5 text-xl">
+      DEJANOS TU CONSULTA A TRAVÉS DEL SIGUIENTE FORMULARIO:
+    </p>
+    <form class="flex flex-col gap-5 mt-12">
+      <input
+        type="text"
+        placeholder="NOMBRE"
+        class="p-3 rounded-full bg-white"
+      />
+      <input
+        type="text"
+        placeholder="TELÉFONO"
+        class="p-3 rounded-full bg-white"
+      />
+      <input
+        type="text"
+        placeholder="CORREO ELECTRÓNICO"
+        class="p-3 rounded-full bg-white"
+      />
+      <textarea placeholder="MENSAJE" class="p-3 rounded-xl bg-white h-[300px]"
+      ></textarea>
+      <button class="btn text-white text-xl">Enviar</button>
+    </form>
+  </div>
+  <div class="mt-auto" id="container-location">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105073.45340551628!2d-58.51569977696908!3d-34.61565476751807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1715287590451!5m2!1ses-419!2sar"
+      class="w-full h-[300px] md:w-[600px] md:h-[400px]"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<script>
+  const containerLocation = document.getElementById("container-location");
+  const select = document.getElementById("paises") as HTMLSelectElement;
+  select.addEventListener("change", () => {
+    if (select.value === "NAPOLES, ITALIA") {
+      containerLocation.innerHTML = `
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96570.0091258118!2d14.16420105440978!3d40.85403397990413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b0866db7afaeb%3A0xd23a43cc658cb87e!2sN%C3%A1poles%2C%20Italia!5e0!3m2!1ses-419!2sar!4v1715287513733!5m2!1ses-419!2sar" class="w-full h-[300px] md:w-[600px] md:h-[400px]" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      `;
+    } else if (select.value === "BUENOS AIRES, ARGENTINA") {
+      containerLocation.innerHTML = `
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105073.45340551628!2d-58.51569977696908!3d-34.61565476751807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1715287590451!5m2!1ses-419!2sar" class="w-full h-[300px] md:w-[600px] md:h-[400px]" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      `;
+    } else {
+      containerLocation.innerHTML = `
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194347.47826845644!2d-3.844346971176892!3d40.43809861087792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2zTWFkcmlkLCBFc3Bhw7Fh!5e0!3m2!1ses-419!2sar!4v1715287619706!5m2!1ses-419!2sar" class="w-full h-[300px] md:w-[600px] md:h-[400px]" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      `;
+    }
+  });
+</script>

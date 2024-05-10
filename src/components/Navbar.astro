@@ -1,0 +1,311 @@
+---
+import LogoDiego from "./LogoDiego.astro";
+---
+
+<header
+  class="bg-black bg-opacity-30 p-5 z-[200] w-full transition-all duration-300 text-white fixed"
+  id="menu"
+>
+  <nav class="flex justify-center items-center gap-[150px]">
+    <div>
+      <LogoDiego />
+    </div>
+    <div class="md:flex items-center gap-10 text-[13px] hidden">
+      <a
+        href="#home"
+        class="text-orange-300 transition-all duration-200 hover:text-orange-300 hvr-underline-from-center"
+        id="item-menu-1"
+      >
+        HOME
+      </a>
+      <a
+        href="#about"
+        class="transition-all duration-200 hover:text-orange-300 hvr-underline-from-center"
+        id="item-menu-2"
+      >
+        ACERCA DE
+      </a>
+      <a
+      href="#horarios"
+        class="transition-all duration-200 hover:text-orange-300 hvr-underline-from-center"
+        id="item-menu-3"
+      >
+        HORARIOS
+      </a>
+      <a
+        href="#precios"
+        class="transition-all duration-200 hover:text-orange-300 hvr-underline-from-center"
+        id="item-menu-4"
+      >
+        PRECIOS
+      </a>
+      <a
+        href="#informacion"
+        class="transition-all duration-200 hover:text-orange-300 hvr-underline-from-center"
+        id="item-menu-5"
+      >
+        INFORMACION
+      </a>
+      <a
+        class="transition-all duration-200 hover:text-orange-300 hvr-underline-from-center"
+        id="item-menu-6"
+      >
+        VIDEOS
+      </a>
+      <a
+        href="#contacto"
+        class="transition-all duration-200 hover:text-orange-300 hvr-underline-from-center"
+        id="item-menu-7"
+      >
+        CONTACTO
+      </a>
+      <div
+        class="rounded-full px-7 py-1 transition-all duration-300 bg-[#c8a557] hover:bg-white hover:text-black ml-5"
+      >
+        <button class="text-left text-[14px] p-2" id="item-comprar">
+          Comprar entradas
+        </button>
+      </div>
+    </div>
+
+    {/* Mobile */}
+    <div class="md:hidden flex items-center">
+      <div id="button-menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M4 6l16 0"></path>
+          <path d="M4 12l16 0"></path>
+          <path d="M4 18l16 0"></path>
+        </svg>
+      </div>
+      <div
+        class="rounded-md text-center py-1 transition-all md:w-full duration-300 bg-[#c8a557] hover:bg-white hover:text-black ml-5"
+      >
+        <button class="text-left text-[12px] text-black p-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 22 22"
+            class="w-[25px] mx-auto"
+          >
+            <path
+              d="M16.5 5.6c-1-1-1-2.6 0-3.6L14.7.2.1 14.6l1.8 1.8c1-1 2.6-1 3.6 0s1 2.6 0 3.6l1.8 1.8L21.9 7.4l-1.8-1.8c-1 1-2.6 1-3.6 0zm.1 5.3c-.4.4-1 .4-1.4 0-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4zm-2.1-2.1c-.4.4-1 .4-1.4 0-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4zm-2.1-2.1c-.4.4-1 .4-1.4 0-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0 .4.4.4 1.1 0 1.4z"
+            ></path>
+          </svg>
+          <p id="item-comprar-mobile">Comprar</p>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <aside
+    class="h-screen transition-all duration-300 fixed right-0 top-0 translate-x-[250px] md:hidden bg-black block w-[60%] z-30 p-3"
+    id="menu-mobile"
+  >
+    <div id="button-close">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-x ml-auto"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M18 6l-12 12"></path>
+        <path d="M6 6l12 12"></path>
+      </svg>
+    </div>
+    <div class="flex flex-col items-center gap-10 text-[13px] text-white mt-20">
+      <a
+        href="#home"
+        class="text-orange-300 transition-all duration-200 hover:text-orange-300"
+        id="item-menu-mobile-1"
+      >
+        HOME
+      </a>
+      <a
+        href="#about"
+        class="transition-all duration-200 hover:text-orange-300"
+        id="item-menu-mobile-2"
+      >
+        ACERCA DE
+      </a>
+      <a
+        href="#horarios"
+        class="transition-all duration-200 hover:text-orange-300"
+        id="item-menu-mobile-3"
+      >
+        HORARIOS
+      </a>
+      <a
+        href="#precios"
+        class="transition-all duration-200 hover:text-orange-300"
+        id="item-menu-mobile-4"
+      >
+        PRECIOS
+      </a>
+      <a
+        href="#informacion"
+        class="transition-all duration-200 hover:text-orange-300"
+        id="item-menu-mobile-5"
+      >
+        INFORMACION
+      </a>
+      <a
+        class="transition-all duration-200 hover:text-orange-300"
+        id="item-menu-mobile-6"
+      >
+        VIDEOS
+      </a>
+      <a
+        href="#contacto"
+        class="transition-all duration-200 hover:text-orange-300"
+        id="item-menu-mobile-7"
+      >
+        CONTACTO
+      </a>
+    </div>
+  </aside>
+</header>
+
+<style>
+  .hvr-underline-from-center {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+  }
+  .hvr-underline-from-center:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #4abaee;
+    height: 1px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-underline-from-center:hover:before,
+  .hvr-underline-from-center:focus:before,
+  .hvr-underline-from-center:active:before {
+    left: 0;
+    right: 0;
+  }
+</style>
+
+<script>
+  // Menu mobile. Abrir
+  const buttonMenu = document.getElementById("button-menu");
+  buttonMenu.addEventListener("click", () => {
+    document
+      .getElementById("menu-mobile")
+      .classList.remove("translate-x-[250px]");
+  });
+  // Menu mobile. Cerrar
+  const buttonMenuClose = document.getElementById("button-close");
+  buttonMenuClose.addEventListener("click", () => {
+    document.getElementById("menu-mobile").classList.add("translate-x-[250px]");
+  });
+
+  // --------------------
+
+  // Efecto Menu
+  const menu = document.getElementById("menu");
+  window.addEventListener("scroll", (e) => {
+    if (window.pageYOffset > 300) {
+      menu.classList.remove("bg-opacity-30");
+    } else {
+      menu.classList.add("bg-opacity-30");
+    }
+  });
+  // ----------------
+
+  // Cambio de idiomas en Menu de navegación
+
+  // Links del Menu pc
+  const itemMenu1 = document.getElementById("item-menu-1");
+  const itemMenu2 = document.getElementById("item-menu-2");
+  const itemMenu3 = document.getElementById("item-menu-3");
+  const itemMenu4 = document.getElementById("item-menu-4");
+  const itemMenu5 = document.getElementById("item-menu-5");
+  const itemMenu6 = document.getElementById("item-menu-6");
+  const itemMenu7 = document.getElementById("item-menu-7");
+  const buttonComprar = document.getElementById("item-comprar")
+
+  // Links del Menu mobile
+  const itemMenuMobile1 = document.getElementById("item-menu-mobile-1");
+  const itemMenuMobile2 = document.getElementById("item-menu-mobile-2");
+  const itemMenuMobile3 = document.getElementById("item-menu-mobile-3");
+  const itemMenuMobile4 = document.getElementById("item-menu-mobile-4");
+  const itemMenuMobile5 = document.getElementById("item-menu-mobile-5");
+  const itemMenuMobile6 = document.getElementById("item-menu-mobile-6");
+  const itemMenuMobile7 = document.getElementById("item-menu-mobile-7");
+  const buttonComprarMobile = document.getElementById("item-comprar-mobile")
+
+  const select = document.getElementById("paises") as HTMLSelectElement;
+  select.addEventListener("change", () => {
+    if (select.value === "NAPOLES, ITALIA") {
+      // Pc
+      itemMenu1.textContent = "HOME";
+      itemMenu2.textContent = "SU DI NOI";
+      itemMenu3.textContent = "ORARI";
+      itemMenu4.textContent = "PREZZI";
+      itemMenu5.textContent = "PROMOZIONI";
+      itemMenu6.textContent = "VIDEO";
+      itemMenu7.textContent = "CONTATTI";
+      buttonComprar.textContent = "Acquistare biglietti"
+      // Mobile
+      itemMenuMobile1.textContent = "HOME";
+      itemMenuMobile2.textContent = "SU DI NOI";
+      itemMenuMobile3.textContent = "ORARI";
+      itemMenuMobile4.textContent = "PREZZI";
+      itemMenuMobile5.textContent = "PROMOZIONI";
+      itemMenuMobile6.textContent = "VIDEO";
+      itemMenuMobile7.textContent = "CONTATTI";
+      buttonComprarMobile.textContent = "Acquistare"
+    } else {
+      // Pc
+      itemMenu1.textContent = "HOME";
+      itemMenu2.textContent = "ACERCA DE";
+      itemMenu3.textContent = "HORARIOS";
+      itemMenu4.textContent = "PRECIOS";
+      itemMenu5.textContent = "PROMOCIONES";
+      itemMenu6.textContent = "VIDEOS";
+      itemMenu7.textContent = "CONTACTO";
+      buttonComprar.textContent = "Comprar entradas"
+      // Mobile
+      itemMenuMobile1.textContent = "HOME";
+      itemMenuMobile2.textContent = "ACERCA DE";
+      itemMenuMobile3.textContent = "HORARIOS";
+      itemMenuMobile4.textContent = "PRECIOS";
+      itemMenuMobile5.textContent = "PROMOCIONES";
+      itemMenuMobile6.textContent = "VIDEOS";
+      itemMenuMobile7.textContent = "CONTACTO";
+      buttonComprarMobile.textContent = "Comprar"
+    }
+    console.log(select.value);
+  });
+</script>
