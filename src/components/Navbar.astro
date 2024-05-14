@@ -3,73 +3,82 @@ import LogoDiego from "./LogoDiego.astro";
 ---
 
 <header
-  class="bg-black bg-opacity-30 p-5 z-[200] w-full transition-all duration-300 text-white fixed"
+  class="bg-black p-2 z-[200] w-full transition-all duration-300 text-white fixed"
   id="menu"
 >
   <nav
     class="flex md:justify-center items-center md:gap-[150px] justify-between"
   >
-    <div>
-      <LogoDiego />
-    </div>
+    <a href="/">
+      <img src="/logo-DIEGO-VIVE-fondo-degrade.png" alt="" class="w-[150px]" />
+    </a>
     <div class="md:flex items-center gap-10 text-[13px] hidden">
       <a
         href="#home"
-        class="text-orange-300 transition-all duration-200 hover:text-orange-300 hvr-underline-from-center"
+        class="text-[#00ff18] transition-all duration-200 hover:text-orange-300 hvr-underline-from-center"
         id="item-menu-1"
+        style="font-family: Montserrat, sans-serif"
       >
         HOME
       </a>
       <a
         href="#about"
-        class="transition-all duration-200 hover:text-orange-300 hvr-underline-from-center"
+        class="text-[#3289ff] transition-all duration-200 hover:text-orange-300 hvr-underline-from-center"
         id="item-menu-2"
+        style="font-family: Montserrat, sans-serif"
       >
         ACERCA DE
       </a>
       <a
         href="#horarios"
-        class="transition-all duration-200 hover:text-orange-300 hvr-underline-from-center"
+        class="text-[#3289ff] transition-all duration-200 hover:text-orange-300 hvr-underline-from-center"
         id="item-menu-3"
+        style="font-family: Montserrat, sans-serif"
       >
         HORARIOS
       </a>
       <a
         href="#precios"
-        class="transition-all duration-200 hover:text-orange-300 hvr-underline-from-center"
+        class="text-[#3289ff] transition-all duration-200 hover:text-orange-300 hvr-underline-from-center"
         id="item-menu-4"
+        style="font-family: Montserrat, sans-serif"
       >
         PRECIOS
       </a>
       <a
         href="#informacion"
-        class="transition-all duration-200 hover:text-orange-300 hvr-underline-from-center"
+        class="text-[#3289ff] transition-all duration-200 hover:text-orange-300 hvr-underline-from-center"
         id="item-menu-5"
+        style="font-family: Montserrat, sans-serif"
       >
         INFORMACION
       </a>
       <a
-        class="transition-all duration-200 hover:text-orange-300 hvr-underline-from-center"
+        class="text-[#3289ff] transition-all duration-200 hover:text-orange-300 hvr-underline-from-center"
         id="item-menu-6"
+        style="font-family: Montserrat, sans-serif"
       >
         VIDEOS
       </a>
       <a
         href="#contacto"
-        class="transition-all duration-200 hover:text-orange-300 hvr-underline-from-center"
+        class="text-[#3289ff] transition-all duration-200 hover:text-orange-300 hvr-underline-from-center"
         id="item-menu-7"
+        style="font-family: Montserrat, sans-serif"
       >
         CONTACTO
       </a>
       <div
-        class="rounded-full px-7 py-1 transition-all duration-300 bg-[#c8a557] hover:bg-white hover:text-black ml-5"
+        style="background-image: url('/boton-verde-comprar-entrada.png')"
+        class="rounded-full transition-all duration-300 bg-cover"
       >
         <a
           href="#"
-          class="text-left text-[14px] px-2 py-2 block"
+          class="text-left text-[16px] tracking-wider p-8 block text-black font-[800]"
           id="item-comprar"
+          style="font-family: Montserrat, sans-serif"
         >
-          Comprar entradas
+          COMPRAR ENTRADA
         </a>
       </div>
     </div>
@@ -243,17 +252,6 @@ import LogoDiego from "./LogoDiego.astro";
   });
 
   // --------------------
-
-  // Efecto Menu
-  const menu = document.getElementById("menu");
-  window.addEventListener("scroll", (e) => {
-    if (window.pageYOffset > 300) {
-      menu.classList.remove("bg-opacity-30");
-    } else {
-      menu.classList.add("bg-opacity-30");
-    }
-  });
-  // ----------------
 
   // Cambio de idiomas en Menu de navegación
 
