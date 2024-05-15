@@ -8,40 +8,33 @@ import Actividades from "./Actividades.astro";
       class="flex md:flex-row flex-col justify-center gap-3 -top-8 md:absolute left-0 right-0"
     >
       <div
-        class="flex flex-col bg-cover bg-center gap-3 md:w-[35%] w-full md:p-3 p-12 md:-mt-[53px] rounded-xl"
+        class="flex flex-col bg-cover bg-center md:gap-8 md:w-[35%] w-full md:p-3 p-12 md:-mt-[53px] rounded-xl"
         style="background-image: url(/cuadro-movimiento-dorso.png);"
       >
         <img src="/firma-diego.png" alt="" class="md:w-[200px] w-[100px] md:ml-20 md:mt-12" />
-        <h1 style="font-family: Anton, sans-serif;" class="md:text-3xl text-2xl md:w-[400px] w-[300px] md:ml-12 text-left md:text-center text-white">EL PRIMER PARQUE TEMÁTICO TECNOLÓGICO DEDICADO AL MÁS GRANDE DE LA HISTORIA</h1>
-        <p style="font-family: Montserrat, sans-serif" class="text-white text-left font-bold md:text-xl text-sm uppercase">Diego vive es el primer parque temático del mundo que se realiza en homenaje a un deportista. Es una experiencia única en la cual los sueños se convierten en realidad.</p>
-        <img src="/iconos-del-evento.png" alt="">
+        <h1 style="font-family: Anton, sans-serif;" class="md:text-3xl text-2xl md:w-[400px] w-[300px] mx-auto md:ml-12 text-left md:text-center text-white">IL PRIMO PARCO TEMATICO TECNOLOGICO DEDICATO AL PIÙ GRANDE DELLA STORIA</h1>
+        <p style="font-family: Montserrat, sans-serif" class="text-white text-left font-bold md:text-[17px] mx-auto text-sm uppercase">Diego vive è il primo parco tematico al mondo realizzato in omaggio a un atleta. È un'esperienza unica in cui i sogni diventano realtà.</p>
+        <img src="/iconos-del-evento.png" alt="" class="mx-auto">
       </div>
-      <article class="flex flex-col">
+      <article class="flex flex-col justify-center">
         <div
           style="background-image: url(/recuadro-fondo-lugar-fecha.png)"
-          class="rounded-lg flex md:flex-row p-3 md:px-2 flex-col bg-center"
+          class="rounded-lg flex md:flex-row md:p-3 py-5 md:px-24 flex-col bg-center"
         >
           <div
-            class="flex md:border-r-[5px] border-b-[3px] pb-4 md:pb-0 md:border-b-0 border-black md:pr-7"
+            class="flex md:border-r-[5px] border-b-[3px] mx-auto md:mx-0 pb-4 md:pb-0 md:border-b-0 border-black md:pr-7"
           >
             <img src="/icon-lugar.png" alt="" class="w-[60px]" />
             <div class="md:ml-3">
-              <select
-                class="md:text-xl text-[16px] w-full font-[600] outline-none border-b-[5px] bg-transparent text-black border-black"
-                id="paises"
-              >
-                <option>BUENOS AIRES, ARGENTINA</option>
-                <option>NAPOLES, ITALIA</option>
-                <option>BARCELONA Y MADRID, ESPAÑA</option>
-              </select>
+              <p class="text-black md:text-2xl text-xl font-[600]">NAPOLES, ITALIA</p>
               <p
-                class="text-black md:text-xl text-[16px] font-[600] ml-0.5 text-center"
+                class="text-black md:text-xl text-[18px] font-[600] ml-0.5 text-center"
               >
-                LOCALIDAD
+              LOCALITÀ
               </p>
             </div>
           </div>
-          <div class="flex items-center gap-3 text-black md:ml-5 md:mt-0 mt-5">
+          <div class="flex items-center gap-3 text-black md:ml-12 mx-auto md:mt-0 mb-5 md:mb-0 pt-3 md:pt-0">
             <img src="/icon-fecha.png" alt="" class="w-[60px]" />
             <p class="text-xl font-[600]" id="fecha">15 - 5 MAGGIO 2024</p>
           </div>
@@ -59,10 +52,10 @@ import Actividades from "./Actividades.astro";
                 class="font-bold text-2xl text-black"
                 style="font-family: Anton, sans-serif;"
               >
-                ENTRADAS A PRECIO NORMAL
+              BIGLIETTI A PREZZO NORMALE
               </p>
               <p class="text-gray-500 text-sm">
-                Todas las categorías de entradas
+                Tutte le categorie di biglietti
               </p>
               <div
                 style="background-image: url(/boton-magenta-comprar-entrada.png)"
@@ -70,11 +63,11 @@ import Actividades from "./Actividades.astro";
               >
                 <a
                   href="#"
-                  class="rounded-3xl text-white w-full block"
+                  class="rounded-3xl text-white w-full block font-[600]"
                   id="comprar-entrada-diego"
                   style="font-family: Montserrat, sans-serif"
                 >
-                  COMPRAR ENTRADA
+                ACQUISTARE BIGLIETTO
                 </a>
               </div>
             </div>

@@ -27,7 +27,7 @@ import LogoDiego from "./LogoDiego.astro";
         id="item-menu-2"
         style="font-family: Montserrat, sans-serif"
       >
-        ACERCA DE
+        SU DI NOI
       </a>
       <a
         href="#horarios"
@@ -35,7 +35,7 @@ import LogoDiego from "./LogoDiego.astro";
         id="item-menu-3"
         style="font-family: Montserrat, sans-serif"
       >
-        HORARIOS
+        ORARI
       </a>
       <a
         href="#precios"
@@ -43,7 +43,7 @@ import LogoDiego from "./LogoDiego.astro";
         id="item-menu-4"
         style="font-family: Montserrat, sans-serif"
       >
-        PRECIOS
+        PREZZI
       </a>
       <a
         href="#informacion"
@@ -51,14 +51,7 @@ import LogoDiego from "./LogoDiego.astro";
         id="item-menu-5"
         style="font-family: Montserrat, sans-serif"
       >
-        INFORMACION
-      </a>
-      <a
-        class="text-[#3289ff] transition-all duration-200 hover:text-orange-300 hvr-underline-from-center"
-        id="item-menu-6"
-        style="font-family: Montserrat, sans-serif"
-      >
-        VIDEOS
+        INFORMAZIONI
       </a>
       <a
         href="#contacto"
@@ -66,7 +59,7 @@ import LogoDiego from "./LogoDiego.astro";
         id="item-menu-7"
         style="font-family: Montserrat, sans-serif"
       >
-        CONTACTO
+        CONTATTI
       </a>
       <div
         style="background-image: url('/boton-verde-comprar-entrada.png')"
@@ -78,7 +71,7 @@ import LogoDiego from "./LogoDiego.astro";
           id="item-comprar"
           style="font-family: Montserrat, sans-serif"
         >
-          COMPRAR ENTRADA
+          ACQUISTARE BIGLIETTO
         </a>
       </div>
     </div>
@@ -161,41 +154,35 @@ import LogoDiego from "./LogoDiego.astro";
         class="transition-all duration-200 hover:text-orange-300"
         id="item-menu-mobile-2"
       >
-        ACERCA DE
+      SU DI NOI
       </a>
       <a
         href="#horarios"
         class="transition-all duration-200 hover:text-orange-300"
         id="item-menu-mobile-3"
       >
-        HORARIOS
+      ORARI
       </a>
       <a
         href="#precios"
         class="transition-all duration-200 hover:text-orange-300"
         id="item-menu-mobile-4"
       >
-        PRECIOS
+      PREZZI
       </a>
       <a
         href="#informacion"
         class="transition-all duration-200 hover:text-orange-300"
         id="item-menu-mobile-5"
       >
-        INFORMACION
-      </a>
-      <a
-        class="transition-all duration-200 hover:text-orange-300"
-        id="item-menu-mobile-6"
-      >
-        VIDEOS
+      INFORMAZIONI
       </a>
       <a
         href="#contacto"
         class="transition-all duration-200 hover:text-orange-300"
         id="item-menu-mobile-7"
       >
-        CONTACTO
+      CONTATTI
       </a>
     </div>
   </aside>
@@ -251,21 +238,7 @@ import LogoDiego from "./LogoDiego.astro";
     document.body.classList.remove("overflow-hidden");
   });
 
-  // --------------------
-
-  // Cambio de idiomas en Menu de navegación
-
-  // Links del Menu pc
-  const itemMenu1 = document.getElementById("item-menu-1");
-  const itemMenu2 = document.getElementById("item-menu-2");
-  const itemMenu3 = document.getElementById("item-menu-3");
-  const itemMenu4 = document.getElementById("item-menu-4");
-  const itemMenu5 = document.getElementById("item-menu-5");
-  const itemMenu6 = document.getElementById("item-menu-6");
-  const itemMenu7 = document.getElementById("item-menu-7");
-  const buttonComprar = document.getElementById(
-    "item-comprar"
-  ) as HTMLAnchorElement;
+  // -------------------
 
   // Links del Menu mobile
   const itemMenuMobile1 = document.getElementById("item-menu-mobile-1");
@@ -275,83 +248,7 @@ import LogoDiego from "./LogoDiego.astro";
   const itemMenuMobile5 = document.getElementById("item-menu-mobile-5");
   const itemMenuMobile6 = document.getElementById("item-menu-mobile-6");
   const itemMenuMobile7 = document.getElementById("item-menu-mobile-7");
-  const buttonComprarMobileTexto = document.getElementById(
-    "item-comprar-mobile"
-  );
-  const buttonComprarMobile = document.getElementById(
-    "item-comprar-mobile-entrada"
-  ) as HTMLAnchorElement;
 
-  const select = document.getElementById("paises") as HTMLSelectElement;
-
-  if (select.value === "NAPOLES, ITALIA") {
-    // Link de compra
-    buttonComprar.href = "https://go2.it/evento/diego-vive/7577";
-    // Link de compra
-    buttonComprarMobile.href = "https://go2.it/evento/diego-vive/7577";
-  } else {
-    // Link de compra
-    buttonComprar.href = "#";
-    // Link de compra
-    buttonComprarMobile.href = "#";
-  }
-
-  select.addEventListener("change", () => {
-    if (select.value === "NAPOLES, ITALIA") {
-      // Pc
-      itemMenu1.textContent = "HOME";
-      itemMenu2.textContent = "SU DI NOI";
-      itemMenu3.textContent = "ORARI";
-      itemMenu4.textContent = "PREZZI";
-      itemMenu5.textContent = "PROMOZIONI";
-      itemMenu6.textContent = "VIDEO";
-      itemMenu7.textContent = "CONTATTI";
-      buttonComprar.textContent = "Acquistare biglietti";
-
-      // Link de compra
-      buttonComprar.href = "https://go2.it/evento/diego-vive/7577";
-
-      // Mobile
-      itemMenuMobile1.textContent = "HOME";
-      itemMenuMobile2.textContent = "SU DI NOI";
-      itemMenuMobile3.textContent = "ORARI";
-      itemMenuMobile4.textContent = "PREZZI";
-      itemMenuMobile5.textContent = "PROMOZIONI";
-      itemMenuMobile6.textContent = "VIDEO";
-      itemMenuMobile7.textContent = "CONTATTI";
-      buttonComprarMobileTexto.textContent = "Acquistare";
-
-      // Link de compra
-      buttonComprarMobile.href = "https://go2.it/evento/diego-vive/7577";
-    } else {
-      // Pc
-      itemMenu1.textContent = "HOME";
-      itemMenu2.textContent = "ACERCA DE";
-      itemMenu3.textContent = "HORARIOS";
-      itemMenu4.textContent = "PRECIOS";
-      itemMenu5.textContent = "PROMOCIONES";
-      itemMenu6.textContent = "VIDEOS";
-      itemMenu7.textContent = "CONTACTO";
-      buttonComprar.textContent = "Comprar entradas";
-
-      // Link de compra
-      buttonComprar.href = "#";
-
-      // Mobile
-      itemMenuMobile1.textContent = "HOME";
-      itemMenuMobile2.textContent = "ACERCA DE";
-      itemMenuMobile3.textContent = "HORARIOS";
-      itemMenuMobile4.textContent = "PRECIOS";
-      itemMenuMobile5.textContent = "PROMOCIONES";
-      itemMenuMobile6.textContent = "VIDEOS";
-      itemMenuMobile7.textContent = "CONTACTO";
-      buttonComprarMobile.textContent = "Comprar";
-
-      // Link de compra
-      buttonComprarMobile.href = "#";
-    }
-    console.log(select.value);
-  });
 
   // Efecto cerrar menu mobile cuando se presiona un link
   itemMenuMobile1.addEventListener("click", () => {
