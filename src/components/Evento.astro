@@ -34,17 +34,3 @@
     </div>
   </main>
 </section>
-
-<script>
-  const buttonComprarEventoDiego = document.getElementById(
-    "comprar-emtradas-diego-evento"
-  ) as HTMLAnchorElement;
-  const select = document.getElementById("paises") as HTMLSelectElement;
-  select.addEventListener("change", () => {
-    if (select.value === "NAPOLES, ITALIA") {
-      buttonComprarEventoDiego.href = "https://go2.it/evento/diego-vive/7577";
-    } else {
-      buttonComprarEventoDiego.href = "#";
-    }
-  });
-</script>
