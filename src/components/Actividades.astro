@@ -5,7 +5,7 @@
   >
     DIVENTA MARADONA PER UN GIORNO
   </h2>
-  <article class="mt-12 md:px-24">
+  <article class="mt-12 xl:px-24">
     <div id="tunel-container">
       <div class="relative">
         <img
@@ -14,7 +14,7 @@
           class="w-[400px] object-cover"
         />
         <p
-          class="absolute text-white bg-blue-600 rounded-md p-2 font-bold bg-opacity-90 bottom-5 left-3 right-0 w-[95%] md:w-[85%] invisible"
+          class="absolute text-white transition duration-200 opacity-0 hover:opacity-100 bg-blue-600 rounded-md p-2 font-bold bg-opacity-90 bottom-5 left-3 right-0 w-[95%]"
           id="text-tunel"
         >
           Si attraversa un lungo tunnel di immagini, proiettate ad alta
@@ -33,7 +33,7 @@
       <div class="relative">
         <img src="/actividad-conoce-la-historia.png" alt="" class="w-[400px]" />
         <p
-          class="absolute text-white bg-blue-600 rounded-md p-2 font-bold bg-opacity-90 bottom-5 left-3 right-0 w-[95%] md:w-[85%] invisible"
+          class="absolute text-white bg-blue-600 rounded-md p-2 font-bold bg-opacity-90 bottom-5 left-3 right-0 w-[95%] transition duration-200 opacity-0 hover:opacity-100"
           id="text-casa"
         >
           La reconstrucción escenográfica de la casa de la infancia de DIEGO. Al
@@ -52,7 +52,7 @@
       <div class="relative">
         <img src="/actividad-historia-en-exhib.png" alt="" class="w-[400px]" />
         <p
-          class="absolute text-white bg-blue-600 rounded-md p-2 font-bold bg-opacity-90 bottom-5 left-3 right-0 w-[95%] md:w-[85%] invisible"
+          class="absolute text-white bg-blue-600 rounded-md p-2 font-bold bg-opacity-90 bottom-5 left-3 right-0 w-[95%] transition duration-200 opacity-0 hover:opacity-100"
           id="text-museo"
         >
           Qui, come in una mostra tradizionale, sono esposte riproduzioni di
@@ -75,7 +75,7 @@
           class="w-[400px]"
         />
         <p
-          class="absolute text-white bg-blue-600 rounded-md p-2 font-bold bg-opacity-90 bottom-5 left-3 right-0 w-[95%] md:w-[85%] invisible"
+          class="absolute text-white bg-blue-600 rounded-md p-2 font-bold bg-opacity-90 bottom-5 left-3 right-0 w-[95%] transition duration-200 opacity-0 hover:opacity-100"
           id="text-inmersivo"
         >
           Uno stadio virtuale, ricostruito con animazioni 3D, accoglie e avvolge
@@ -94,7 +94,7 @@
       <div class="relative">
         <img src="/actividad-juga-con-diego.png" alt="" class="w-[400px]" />
         <p
-          class="absolute text-white bg-blue-600 rounded-md p-2 font-bold bg-opacity-90 bottom-5 left-3 right-0 w-[95%] md:w-[85%] invisible"
+          class="absolute text-white bg-blue-600 rounded-md p-2 font-bold bg-opacity-90 bottom-5 left-3 right-0 w-[95%] transition duration-200 opacity-0 hover:opacity-100"
           id="text-juga"
         >
           L ́area propone tre installazioni di gaming interattivo progettate e
@@ -113,7 +113,7 @@
       <div class="relative">
         <img src="/actividad-el-objetivo.png" alt="" class="w-[400px]" />
         <p
-          class="absolute text-white bg-blue-600 rounded-md p-2 font-bold bg-opacity-90 bottom-5 left-3 right-0 w-[95%] md:w-[85%] invisible"
+          class="absolute text-white bg-blue-600 rounded-md p-2 font-bold bg-opacity-90 bottom-5 left-3 right-0 w-[95%] transition duration-200 opacity-0 hover:opacity-100"
           id="text-vr"
         >
           Delle postazione specificatamente allestiste, offrono ai visitatori la
@@ -137,61 +137,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     gap: 8px;
+    place-items: center;
   }
 </style>
-
-<script>
-  const tunelContainer = document.getElementById("tunel-container");
-  const textTunel = document.getElementById("text-tunel");
-  tunelContainer.addEventListener("mouseenter", () => {
-    textTunel.classList.remove("invisible");
-  });
-  tunelContainer.addEventListener("mouseleave", () => {
-    textTunel.classList.add("invisible");
-  });
-
-  const casaContainer = document.getElementById("casa-container");
-  const textCasa = document.getElementById("text-casa");
-  casaContainer.addEventListener("mouseenter", () => {
-    textCasa.classList.remove("invisible");
-  });
-  casaContainer.addEventListener("mouseleave", () => {
-    textCasa.classList.add("invisible");
-  });
-
-  const museoContainer = document.getElementById("museo-container");
-  const textMuseo = document.getElementById("text-museo");
-  museoContainer.addEventListener("mouseenter", () => {
-    textMuseo.classList.remove("invisible");
-  });
-  museoContainer.addEventListener("mouseleave", () => {
-    textMuseo.classList.add("invisible");
-  });
-
-  const containerInmersivo = document.getElementById("container-inmersivo");
-  const textInmersivo = document.getElementById("text-inmersivo");
-  containerInmersivo.addEventListener("mouseenter", () => {
-    textInmersivo.classList.remove("invisible");
-  });
-  containerInmersivo.addEventListener("mouseleave", () => {
-    textInmersivo.classList.add("invisible");
-  });
-
-  const containerJuga = document.getElementById("container-juga");
-  const textJuga = document.getElementById("text-juga");
-  containerJuga.addEventListener("mouseenter", () => {
-    textJuga.classList.remove("invisible");
-  });
-  containerJuga.addEventListener("mouseleave", () => {
-    textJuga.classList.add("invisible");
-  });
-
-  const containerVr = document.getElementById("container-vr");
-  const textVr = document.getElementById("text-vr");
-  containerVr.addEventListener("mouseenter", () => {
-    textVr.classList.remove("invisible");
-  });
-  containerVr.addEventListener("mouseleave", () => {
-    textVr.classList.add("invisible");
-  });
-</script>

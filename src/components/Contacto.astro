@@ -1,9 +1,15 @@
+---
+import Tiktok from "../icons/Tiktok.astro";
+import Meta from "../icons/Meta.astro";
+import Instagram from "../icons/Instagram.astro";
+---
+
 <footer
   style="background-image: url(/fondo-COMUNIQUESE.png);"
-  class="bg-cover bg-no-repeat bg-center md:p-8 relative p-5"
+  class="bg-cover bg-no-repeat bg-center xl:p-8 relative p-5"
 >
   <section
-    class="md:p-12 flex md:flex-row flex-col justify-center gap-20 md:px-20"
+    class="xl:p-12 flex xl:flex-row flex-col justify-center gap-20 xl:px-20"
     id="contacto"
   >
     <div class="mt-auto" id="container-location">
@@ -16,14 +22,14 @@
       </p>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.366418456424!2d14.160269075591865!3d40.8199146310028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b0f5c1bdfc3f9%3A0x51586a8695e5ab42!2sCinema%20all'aperto%20ex-Base%20Nato%20di%20Bagnoli!5e0!3m2!1ses-419!2sar!4v1715881336659!5m2!1ses-419!2sar"
-        class="w-full h-[300px] md:w-[600px] md:h-[400px] rounded-md"
+        class="w-full h-[300px] xl:w-[600px] xl:h-[400px] rounded-md"
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="w-full">
       <h5
-        class="md:text-[45px] text-3xl text-blue-400 font-[500] uppercase md:text-left text-center"
+        class="xl:text-[45px] text-3xl text-blue-400 font-[500] uppercase xl:text-left text-center"
         style="font-family: Anton, sans-serif;"
       >
         Contattaci
@@ -53,67 +59,22 @@
     </div>
   </section>
   <div class="flex justify-center text-blue-300 mt-5">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="50"
-      height="50"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tiktok"
-      ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-        d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z"
-      ></path></svg
-    >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="50"
-      height="50"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-meta"
-      ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-        d="M12 10.174c1.766 -2.784 3.315 -4.174 4.648 -4.174c2 0 3.263 2.213 4 5.217c.704 2.869 .5 6.783 -2 6.783c-1.114 0 -2.648 -1.565 -4.148 -3.652a27.627 27.627 0 0 1 -2.5 -4.174z"
-      ></path><path
-        d="M12 10.174c-1.766 -2.784 -3.315 -4.174 -4.648 -4.174c-2 0 -3.263 2.213 -4 5.217c-.704 2.869 -.5 6.783 2 6.783c1.114 0 2.648 -1.565 4.148 -3.652c1 -1.391 1.833 -2.783 2.5 -4.174z"
-      ></path></svg
-    >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="50"
-      height="50"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"
-      ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-        d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
-      ></path><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path
-        d="M16.5 7.5l0 .01"></path></svg
-    >
+    <Tiktok />
+    <Meta />
+    <Instagram />
   </div>
   <div class="mt-12">
     <p class="text-white text-center text-2xl font-[700]">CI ACCOMPAGNANO:</p>
-    <div class="flex justify-center gap-3 mt-5">
-      <img src="/aireuropa.png" alt="" class="md:w-[120px] w-[30%]" />
-      <img src="/logo-bs.png" alt="" class="md:w-[120px] w-[30%]" />
-      <img src="/logo-afa.png" alt="" class="md:w-[120px] w-[30%]" />
+    <div class="flex flex-wrap justify-center gap-3 mt-5">
+      <img src="/aireuropa.png" alt="" class="xl:w-[120px] w-[30%]" />
+      <img src="/logo-bs.png" alt="" class="xl:w-[120px] w-[30%]" />
+      <img src="/logo-afa.png" alt="" class="xl:w-[120px] w-[30%]" />
     </div>
     <p class="text-white font-[600] text-center mt-20">
       Programación: <a
         href="https://www.linkedin.com/in/ignacio-gomez-523b03258/"
         target="_blank"
-        class="text-blue-500 transition-all duration-200 hover:text-orange-500"
+        class="text-orange-500 transition-all duration-200 hover:text-blue-500"
         >Ignacio Gómez Rodríguez</a
       >
     </p>
@@ -121,11 +82,11 @@
   <img
     src="/Diego-con-pelota.png"
     alt=""
-    class="absolute bottom-0 left-0 w-[350px] md:block hidden"
+    class="absolute bottom-0 left-0 w-[350px] xl:block hidden"
   />
   <img
     src="/Diego-calentando.png"
     alt=""
-    class="absolute bottom-0 right-0 w-[480px] md:block hidden"
+    class="absolute bottom-0 right-0 w-[480px] xl:block hidden"
   />
 </footer>
