@@ -5,11 +5,12 @@ import Close from "../icons/Close.astro";
 ---
 
 <header
-  class="bg-black p-2 z-[500] w-full transition-all duration-300 text-white fixed"
+  class="bg-black z-[500] w-full transition-all duration-300 text-white fixed"
   id="menu"
 >
   <nav
-    class="flex xl:justify-center items-center xl:gap-[150px] justify-between"
+    class="flex xl:justify-center items-center transition-all duration-200 pt-5 xl:gap-[150px] justify-between"
+    id="navbar"
   >
     <a href="/">
       <img src="/logo-DIEGO-VIVE-fondo-degrade.png" alt="" class="w-[150px]" />
@@ -51,7 +52,11 @@ import Close from "../icons/Close.astro";
       >
         CONTATTI
       </a>
-      <a href="https://go2.it/evento/diego-vive/7577" class="bg-green-400 p-3 rounded-md transition duration-200 hover:bg-opacity-90 font-bold text-black">ACQUISTARE BIGLIETTO</a>
+      <a
+        href="https://go2.it/evento/diego-vive/7577"
+        class="bg-green-400 p-3 ml-12 rounded-md transition duration-200 hover:bg-opacity-90 font-bold text-black"
+        >ACQUISTARE BIGLIETTO</a
+      >
     </div>
 
     {/* Mobile */}
@@ -93,35 +98,35 @@ import Close from "../icons/Close.astro";
         class="transition-all duration-200 hover:text-orange-300"
         id="item-menu-mobile-2"
       >
-      SU DI NOI
+        SU DI NOI
       </a>
       <a
         href="#horarios"
         class="transition-all duration-200 hover:text-orange-300"
         id="item-menu-mobile-3"
       >
-      ORARI
+        ORARI
       </a>
       <a
         href="#precios"
         class="transition-all duration-200 hover:text-orange-300"
         id="item-menu-mobile-4"
       >
-      PREZZI
+        PREZZI
       </a>
       <a
         href="#informacion"
         class="transition-all duration-200 hover:text-orange-300"
         id="item-menu-mobile-5"
       >
-      INFORMAZIONI
+        INFORMAZIONI
       </a>
       <a
         href="#contacto"
         class="transition-all duration-200 hover:text-orange-300"
         id="item-menu-mobile-6"
       >
-      CONTATTI
+        CONTATTI
       </a>
     </div>
   </aside>
@@ -162,6 +167,24 @@ import Close from "../icons/Close.astro";
 </style>
 
 <script>
+
+  // Animacion con el scroll
+  window.addEventListener("scroll", () => {
+    const navbar = document.getElementById("navbar");
+
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+    const scrollThreshold = 100;
+
+    if (scrollPosition > scrollThreshold) {
+      // El scroll ha pasado el nivel definido
+      navbar.classList.remove("pt-5");
+    } else {
+      // El scroll está por debajo del nivel definido
+      navbar.classList.add("pt-5");
+    }
+  });
+
   // Menu mobile. Abrir
   const buttonMenu = document.getElementById("button-menu");
   buttonMenu.addEventListener("click", () => {
@@ -186,7 +209,6 @@ import Close from "../icons/Close.astro";
   const itemMenuMobile4 = document.getElementById("item-menu-mobile-4");
   const itemMenuMobile5 = document.getElementById("item-menu-mobile-5");
   const itemMenuMobile6 = document.getElementById("item-menu-mobile-6");
-
 
   // Efecto cerrar menu mobile cuando se presiona un link
   itemMenuMobile1.addEventListener("click", () => {
