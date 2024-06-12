@@ -2,8 +2,11 @@
 import Actividades from "./Actividades.astro";
 ---
 
-<main style="background-image: url(/fondo-ACTIVIDADES.png);" class="bg-cover bg-no-repeat bg-center pb-5">
-  <section class="xl:h-[700px] relative px-2" id="home" >
+<main
+  style="background-image: url(/fondo-ACTIVIDADES.png);"
+  class="bg-cover bg-no-repeat bg-center pb-5"
+>
+  <section class="xl:h-[700px] relative px-2" id="home">
     <section
       class="flex flex-wrap justify-center xl:-top-12 xl:absolute left-0 right-0"
     >
@@ -11,30 +14,55 @@ import Actividades from "./Actividades.astro";
         class="flex flex-col bg-cover bg-center xl:w-[40%] md:w-[80%] xl:mt-0 md:mt-12 xl:gap-3 gap-3 md:gap-7 w-full h-[550px] xl:h-[600px] p-5 rounded-3xl"
         style="background-image: url(/cuadro-movimiento-dorso.png);"
       >
-        <img src="/firma-diego.png" alt="" class="xl:w-[200px] md:w-[150px] md:ml-20 w-[100px] xl:ml-20 xl:mt-0 md:mt-0 mt-12" />
-        <h1 style="font-family: Anton, sans-serif;" class="xl:text-3xl md:text-2xl text-lg xl:w-[400px] md:w-[400px] w-[300px] mx-auto text-left text-white">UN’ESPERIENZA IMMERSIVA A 360° PER TUTTA LA FAMIGLIA SULLA VITA DI DIEGO ARMANDO MARADONA </h1>
-        <p style="font-family: Montserrat, sans-serif" class="text-white font-bold xl:w-[400px] md:w-[400px] w-[320px] mx-auto text-sm uppercase">Un EVENTO IMPERDIBILE per tutti quelli che hanno amato, e ancora amano, il campione senza età, nell’immaginario collettivo molto più di un calciatore.</p>
-        <img src="/iconos-italiano.png" alt="" class="mx-auto xl:w-[400px] md:w-[400px]">
+        <img
+          src="/firma-diego.png"
+          alt=""
+          class="xl:w-[200px] md:w-[150px] md:ml-20 w-[100px] xl:ml-20 xl:mt-0 md:mt-0 mt-12"
+        />
+        <h1
+          style="font-family: Anton, sans-serif;"
+          class="xl:text-3xl md:text-2xl text-lg xl:w-[400px] md:w-[400px] w-[300px] mx-auto text-left text-white"
+        >
+          UN’ESPERIENZA IMMERSIVA A 360° PER TUTTA LA FAMIGLIA SULLA VITA DI
+          DIEGO ARMANDO MARADONA
+        </h1>
+        <p
+          style="font-family: Montserrat, sans-serif"
+          class="text-white font-bold xl:w-[400px] md:w-[400px] w-[320px] mx-auto text-sm uppercase"
+        >
+          Un EVENTO IMPERDIBILE per tutti quelli che hanno amato, e ancora
+          amano, il campione senza età, nell’immaginario collettivo molto più di
+          un calciatore.
+        </p>
+        <img
+          src="/iconos-italiano.png"
+          alt=""
+          class="mx-auto xl:w-[400px] md:w-[400px]"
+        />
       </div>
       <article class="flex flex-col xl:mt-0 md:mt-24">
         <div
           style="background-image: url(/recuadro-fondo-lugar-fecha.png)"
-          class="rounded-3xl flex xl:flex-row md:flex-row xl:p-3 py-5 xl:px-24 md:px-12 flex-col bg-center"
+          class="rounded-3xl flex xl:flex-row md:flex-row xl:p-3 py-5 xl:px-24 md:px-12 flex-col bg-center px-12"
         >
           <div
             class="flex items-center xl:border-r-[5px] md:border-r-[5px] border-b-[3px] mx-auto xl:mx-0 pb-4 xl:pb-0 xl:border-b-0 md:border-b-0 border-black xl:pr-7 md:pr-7"
           >
             <img src="/icon-lugar.png" alt="" class="w-[60px]" />
             <div class="xl:ml-3 md:ml-3">
-              <p class="text-black md:text-2xl text-xl font-[600]">NAPOLES, ITALIA</p>
+              <p class="text-black md:text-2xl text-xl font-[600]">
+                NAPOLES, ITALIA
+              </p>
               <p
                 class="text-black xl:text-xl text-[18px] font-[600] ml-0.5 text-center"
               >
-              LOCALITÀ
+                LOCALITÀ
               </p>
             </div>
           </div>
-          <div class="flex items-center gap-3 text-black md:ml-12 mx-auto md:mt-0 mb-5 md:mb-0 pt-3 md:pt-0">
+          <div
+            class="flex items-center gap-3 text-black md:ml-12 mx-auto md:mt-0 mb-5 md:mb-0 pt-3 md:pt-0"
+          >
             <img src="/icon-fecha.png" alt="" class="w-[60px]" />
             <p class="text-xl font-[600]" id="fecha">30 - 5 MAGGIO 2024</p>
           </div>
@@ -43,29 +71,19 @@ import Actividades from "./Actividades.astro";
           class="flex flex-col rounded-3xl bg-center bg-cover w-full h-[620px]"
           style="background-image: url(/entrada-precio-normal-collage.png)"
         >
-          <div
-            class="text-center w-full rounded-xl mt-[330px]"
-          >
+          <div class="text-center w-full rounded-xl mt-[330px]">
             <div>
               <p
                 class="font-bold text-2xl text-black pt-5"
                 style="font-family: Anton, sans-serif;"
               >
-              BIGLIETTI A PREZZO NORMALE
+                BIGLIETTI A PREZZO NORMALE
               </p>
-              <div
-                style="background-image: url(/boton-magenta-comprar-entrada.png)"
-                class="bg-center bg-contain p-16 bg-no-repeat"
+              <a
+                href="https://go2.it/evento/diego-vive/7577"
+                class="bg-pink-400 shadow-xl p-3 inline-block mt-12 rounded-md transition duration-200 hover:bg-opacity-90 font-bold text-black"
+                >ACQUISTARE BIGLIETTO</a
               >
-                <a
-                  href="https://go2.it/evento/diego-vive/7577"
-                  class="rounded-3xl text-white w-full block font-[600]"
-                  id="comprar-entrada-diego"
-                  style="font-family:   , sans-serif"
-                >
-                ACQUISTARE IL TUO BIGLIETTO
-                </a>
-              </div>
             </div>
           </div>
         </div>
