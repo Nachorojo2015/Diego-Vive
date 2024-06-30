@@ -9,7 +9,7 @@ import Close from "../icons/Close.astro";
   id="menu"
 >
   <nav
-    class="flex xl:justify-center items-center transition-all duration-200 pt-5 px-3 xl:gap-[150px] justify-between"
+    class="flex xl:justify-center items-center transition-all duration-200 px-3 xl:gap-[150px] justify-between"
     id="navbar"
   >
     <a href="/">
@@ -61,7 +61,7 @@ import Close from "../icons/Close.astro";
 
     {/* Mobile */}
     <div class="xl:hidden flex items-center">
-      <div id="button-menu">
+      <div id="button-menu" class="transition-all duration-200 opacity-0">
         <Menu />
       </div>
       <div
@@ -86,48 +86,12 @@ import Close from "../icons/Close.astro";
       <Close />
     </div>
     <div class="flex flex-col items-center gap-10 text-[13px] text-white mt-20">
-      <a
-        href="#home"
-        class="text-orange-300 transition-all duration-200 hover:text-orange-300"
-        id="item-menu-mobile-1"
-      >
-        HOME
-      </a>
-      <a
-        href="#about"
-        class="transition-all duration-200 hover:text-orange-300"
-        id="item-menu-mobile-2"
-      >
-        SU DI NOI
-      </a>
-      <a
-        href="#horarios"
-        class="transition-all duration-200 hover:text-orange-300"
-        id="item-menu-mobile-3"
-      >
-        ORARI
-      </a>
-      <a
-        href="#precios"
-        class="transition-all duration-200 hover:text-orange-300"
-        id="item-menu-mobile-4"
-      >
-        PREZZI
-      </a>
-      <a
-        href="#informacion"
-        class="transition-all duration-200 hover:text-orange-300"
-        id="item-menu-mobile-5"
-      >
-        INFORMAZIONI
-      </a>
-      <a
-        href="#contacto"
-        class="transition-all duration-200 hover:text-orange-300"
-        id="item-menu-mobile-6"
-      >
-        CONTATTI
-      </a>
+      <a href="#home" class="item-menu-mobile text-[#4abaee]"> HOME </a>
+      <a href="#about" class="item-menu-mobile"> SU DI NOI </a>
+      <a href="#horarios" class="item-menu-mobile"> ORARI </a>
+      <a href="#precios" class="item-menu-mobile"> PREZZI </a>
+      <a href="#informacion" class="item-menu-mobile"> INFORMAZIONI </a>
+      <a href="#contacto" class="item-menu-mobile"> CONTATTI </a>
     </div>
   </aside>
 </header>
@@ -164,75 +128,51 @@ import Close from "../icons/Close.astro";
     left: 0;
     right: 0;
   }
+
+  .item-menu-mobile {
+    transition: all 0.2s;
+  }
+
+  .item-menu-mobile:hover {
+    color: #4abaee;
+  }
 </style>
 
 <script>
+  const menuMobile = document.getElementById("menu-mobile");
+  const buttonMenu = document.getElementById("button-menu");
+  const buttonMenuClose = document.getElementById("button-close");
+  const itemsMenuMobile = document.querySelectorAll(".item-menu-mobile");
+
+  // Menu mobile. Abrir
+  buttonMenu.addEventListener("click", () => {
+    menuMobile.classList.remove("translate-x-[500px]");
+    document.body.classList.add("overflow-hidden");
+  });
+
+  // Menu mobile. Cerrar
+  buttonMenuClose.addEventListener("click", () => {
+    menuMobile.classList.add("translate-x-[500px]");
+    document.body.classList.remove("overflow-hidden");
+  });
+
+  // Links del Menu mobile
+  itemsMenuMobile.forEach((i) => {
+    i.addEventListener("click", () => {
+      menuMobile.classList.add("translate-x-[500px]");
+      document.body.classList.remove("overflow-hidden");
+    });
+  });
 
   // Animacion con el scroll
   window.addEventListener("scroll", () => {
-    const navbar = document.getElementById("navbar");
-
     const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-
     const scrollThreshold = 100;
 
     if (scrollPosition > scrollThreshold) {
-      // El scroll ha pasado el nivel definido
-      navbar.classList.remove("pt-5");
+      buttonMenu.classList.remove("opacity-0");
     } else {
-      // El scroll está por debajo del nivel definido
-      navbar.classList.add("pt-5");
+      buttonMenu.classList.add("opacity-0");
     }
-  });
-
-  // Menu mobile. Abrir
-  const buttonMenu = document.getElementById("button-menu");
-  buttonMenu.addEventListener("click", () => {
-    document
-      .getElementById("menu-mobile")
-      .classList.remove("translate-x-[500px]");
-    document.body.classList.add("overflow-hidden");
-  });
-  // Menu mobile. Cerrar
-  const buttonMenuClose = document.getElementById("button-close");
-  buttonMenuClose.addEventListener("click", () => {
-    document.getElementById("menu-mobile").classList.add("translate-x-[500px]");
-    document.body.classList.remove("overflow-hidden");
-  });
-
-  // -------------------
-
-  // Links del Menu mobile
-  const itemMenuMobile1 = document.getElementById("item-menu-mobile-1");
-  const itemMenuMobile2 = document.getElementById("item-menu-mobile-2");
-  const itemMenuMobile3 = document.getElementById("item-menu-mobile-3");
-  const itemMenuMobile4 = document.getElementById("item-menu-mobile-4");
-  const itemMenuMobile5 = document.getElementById("item-menu-mobile-5");
-  const itemMenuMobile6 = document.getElementById("item-menu-mobile-6");
-
-  // Efecto cerrar menu mobile cuando se presiona un link
-  itemMenuMobile1.addEventListener("click", () => {
-    document.getElementById("menu-mobile").classList.add("translate-x-[500px]");
-    document.body.classList.remove("overflow-hidden");
-  });
-  itemMenuMobile2.addEventListener("click", () => {
-    document.getElementById("menu-mobile").classList.add("translate-x-[500px]");
-    document.body.classList.remove("overflow-hidden");
-  });
-  itemMenuMobile3.addEventListener("click", () => {
-    document.getElementById("menu-mobile").classList.add("translate-x-[500px]");
-    document.body.classList.remove("overflow-hidden");
-  });
-  itemMenuMobile4.addEventListener("click", () => {
-    document.getElementById("menu-mobile").classList.add("translate-x-[500px]");
-    document.body.classList.remove("overflow-hidden");
-  });
-  itemMenuMobile5.addEventListener("click", () => {
-    document.getElementById("menu-mobile").classList.add("translate-x-[500px]");
-    document.body.classList.remove("overflow-hidden");
-  });
-  itemMenuMobile6.addEventListener("click", () => {
-    document.getElementById("menu-mobile").classList.add("translate-x-[500px]");
-    document.body.classList.remove("overflow-hidden");
   });
 </script>
