@@ -5,7 +5,7 @@ import Close from "../icons/Close.astro";
 ---
 
 <header
-  class="bg-black z-[500] w-full transition-all duration-300 text-white fixed"
+  class="bg-black bg-opacity-50 z-[500] w-full transition-all duration-300 text-white fixed"
   id="menu"
 >
   <nav
@@ -143,6 +143,7 @@ import Close from "../icons/Close.astro";
   const buttonMenu = document.getElementById("button-menu");
   const buttonMenuClose = document.getElementById("button-close");
   const itemsMenuMobile = document.querySelectorAll(".item-menu-mobile");
+  const headerMenu = document.getElementById("menu")
 
   // Menu mobile. Abrir
   buttonMenu.addEventListener("click", () => {
@@ -171,8 +172,10 @@ import Close from "../icons/Close.astro";
 
     if (scrollPosition > scrollThreshold) {
       buttonMenu.classList.remove("opacity-0");
+      headerMenu.classList.remove("bg-opacity-50");
     } else {
       buttonMenu.classList.add("opacity-0");
+      headerMenu.classList.add("bg-opacity-50");
     }
   });
 </script>
