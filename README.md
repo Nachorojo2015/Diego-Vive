@@ -37,16 +37,19 @@
 > Crea una carpeta en tu pc y dentro del directorio escibe los siguientes comandos
 
 - Clonar proyecto
-    
-    git clone https://github.com/Nachorojo2015/Diego-Vive.git
+~~~
+git clone https://github.com/Nachorojo2015/Diego-Vive.git
+ ~~~
 
 - Instalar dependencias
-
-    npm install
+~~~
+npm install
+~~~
 
 - Levantar proyecto
-
-    npm run dev
+~~~
+npm run dev
+~~~
 
 > [!TIP]
 > Recuerda tener instalado [NODEJS](https://nodejs.org/en) para poder ejecutar los comandos
