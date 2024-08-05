@@ -1,4 +1,4 @@
-<div style="display: flex; justify-content: center;">
+<div style="display: flex; justify-content: center; align-items: center">
   <img src="./public/favicon.svg" style=""/>
 </div>
 
@@ -25,7 +25,7 @@
 <br>
 <hr>
 <br>
-<div style="display: flex; justify-content: center;">
+<div style="display: flex; justify-content: center; align-items: center">
 <img src="./public/preview-images/Samsung-Galaxy-S20-www.diegovive10.com.png">
 </div>
 
